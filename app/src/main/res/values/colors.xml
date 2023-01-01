@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- App Theme -->
+    <color name="dark_pink">#863A6F</color>
+    <color name="pinkish">#975C8D</color>
+    <color name="light_pink">#D989B5</color>
+    <color name="rose_gold">#FFADBC</color>
 </resources>

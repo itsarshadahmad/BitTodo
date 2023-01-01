@@ -1,5 +1,6 @@
 package com.example.bittodo
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,9 +31,11 @@ class TodoAdapter(private val supportFragmentManager: FragmentManager) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val todoItem = getItem(position)
         holder.apply {
+            tvTodoItem.paintFlags = Paint.LINEAR_TEXT_FLAG
             tvTodoItem.text = todoItem.todoItem
             rbTodoItem.setOnCheckedChangeListener { comp, isChecked ->
                 if (isChecked) {
+                    tvTodoItem.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
                     repository.deleteTodo(todoItem)
                     comp.isChecked = false
                 }
